@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+/* Header */
+.header-menu{
+    width: 100%;
+    height: 70px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    border-bottom: 1px solid #F2F2F2;
+    
+    font-family: 'Cardo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 23px;
+    text-align: center;
+    color: #000000;
+}
+
+.header-menu ul{
+    padding: 0;
+}
+
+.header-menu li {
+    list-style-type: none;
+    display: inline-block;
+    padding-left: 20px;
+}
+
+.header-menu a{
+    text-decoration: none;
+}
+
+.header-icon{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.header-picture{
+    width: 100%;
+    height: 90vh;
+    margin-top: 35px; 
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url(/Woodendot/img/header/header-bg.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.header-title{  
+    max-width: 810px;
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 27px;
+    line-height: 1.4;
+    text-align: center;
+    letter-spacing: 0.2px;
+
+    color: #FFFFFF;
+}
+
+.header-botton{
+    margin-top: 30px;
+
+    display: inline-block;
+    width: 204px;
+    height: 33px;
+
+    border: 1px solid #FFFFFF;
+    text-align: center;
+
+    text-decoration: none;
+
+    font-family: 'Cardo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 31px;
+    color: #FFFFFF;
+
+}
+
+.header-question{
+    width: 330px;
+    height: 50px;
+
+    position: absolute;
+    bottom: 3px;
+    left: 20px;
+
+    background-color: #050505;
+
+    font-family: 'Cardo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+
+
+
