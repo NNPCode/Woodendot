@@ -4,9 +4,6 @@
 
 body{
     margin: 0;
-    max-width: 1440px;
-    margin-right: auto;
-    margin-left: auto;
     background-color: #E5E5E5;
 }
 
@@ -50,7 +47,6 @@ p{
     color: #54595F;
 }
 .project-name{ /* Название проекта */
-    margin: 0;
     font-family: 'Roboto';
     font-weight: 700;
     font-size: 33px;
@@ -58,7 +54,6 @@ p{
 }
 
 .project-subtitle{ /* Подзаголовок проекта */
-    margin: 0;
     font-family: 'Cardo';
     font-style: italic;
     font-weight: 400;
@@ -67,7 +62,6 @@ p{
 }
 
 .price{ /* Цена проекта */
-    margin: 0;
     font-family: 'Cardo';
     font-weight: 400;
     font-size: 15px;
@@ -75,7 +69,6 @@ p{
 }
 
 .project-description{ /* Описание проекта */
-    margin: 0;
     font-family: 'Cardo';
     font-weight: 400;
     font-size: 18px;
@@ -85,7 +78,6 @@ p{
 }
 
 .project-botton{ /* Кнопка 'Shop now' в карточке проекта */
-    margin: 0;
     display: inline-block;
     margin-top: 66px;
 
@@ -107,17 +99,20 @@ p{
     border-bottom: 1px solid #F2F2F2;
     
     font-family: 'Cardo', sans-serif;
-    font-weight: 400;
+    font-weight: 600;
     font-size: 17px;
     line-height: 23px;
     text-align: center; 
-    
+}
+
+.header-menu a :hover{
+    text-decoration: underline;
 }
 
 .header-menu li {
     list-style-type: none;
     display: inline-block;
-    padding-left: 20px;  
+    padding-left: 20px;
 }
 
 .header-icon{ /* Logo header*/
@@ -128,7 +123,6 @@ p{
 
 .header-wrap{ /* Обертка header */
     height: 90vh;
-    margin-top: 35px; 
 
     margin-left: auto;
     margin-right: auto;
@@ -140,7 +134,7 @@ p{
     justify-content: center;
     align-items: center;
 
-    background-image: url(img/header/header-bg.jpg);
+    background-image: url(../img/header/header-bg.jpg);
     background-size: cover;
     background-position: center;
 
@@ -159,7 +153,7 @@ p{
     letter-spacing: 0.2px;
 }
 
-.header-botton{
+.header-button{
     margin-top: 30px;
 
     display: inline-block;
@@ -168,25 +162,33 @@ p{
 
     border: 1px solid #FFFFFF;
     text-align: center;
-
-    text-decoration: none;
     
-    font-weight: 700;
+    font-weight: 400;
     font-size: 20px;
     line-height: 31px;
     color: #FFFFFF;
+    transition: all .3s ease-in;
+}
+
+.header-button:hover{
+    background-color: #FFFFFF;
+    color: #000000;
 }
 
 .header-question{ /* Блок с вопросом внизу header */
     width: 330px;
     height: 50px;
+
     position: absolute;
     bottom: 3px;
     left: 20px;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     background-color: #050505;
+
     font-weight: 400;
     font-size: 15px;
     line-height: 20px;
@@ -194,6 +196,7 @@ p{
 
 .advantages{ /* Блок преимущества */
     padding: 65px 70px;
+    
     display: flex;
     justify-content: space-between;   
 }
@@ -203,19 +206,16 @@ p{
     padding-bottom: 90px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .container{ /* Контейнер для контента с описанием справа от фото */
     padding-top: 25px;
-    position: relative;
     display: flex;
     justify-content: center;
 }
 
-.container-text-left{ /* Контейнер для контента с описанием слева от фото */
-    padding-top: 25px;
-    display: flex;
-    justify-content: center;
+.container:nth-child(even){ /* Контейнер для контента с описанием слева от фото, even-четные элементы */
     text-align: right;
 }
 
@@ -224,15 +224,15 @@ p{
     padding-left: 48px;
 }
 
-.design-description-left{ /* Блок с описанием (текст слева от фото) */
-    padding-top: 40px;
+.design-description:nth-child(odd){ /* Блок с описанием (текст слева от фото), odd-нечетные элементы */
     padding-right: 48px;
 }
 
 .other-icons{ /* Дополнительные иконки к описанию */
-    position: absolute;
-    bottom: 0;
-    right: 202px;
+    width: 230px;
+    height: 70px;
+
+    padding-top: 55px;
 }
 
 .main-slider{
@@ -296,7 +296,7 @@ p{
     display: flex;
 }
 
-.block{
+.advantage-company{
     width: 360px;
 
     display: flex;
@@ -305,11 +305,11 @@ p{
     align-items: center;
 }
 
-.block:nth-child(2n+1){
+.advantage-company:nth-child(odd){
     background-color: #FFFFFF;;
 }
 
-.block h4{
+.advantage-company h4{
     padding-top: 36px;
     font-family: 'Cardo';
     font-weight: 400;
@@ -317,7 +317,7 @@ p{
     line-height: 35px;
 }
 
-.block p{
+.advantage-company p{
     padding: 12px 38px 25px 39px;
     font-family: 'Cardo';
     font-weight: 400;
@@ -326,7 +326,7 @@ p{
     text-align: center;
 }
 
-.block a{
+.advantage-company a{
     font-family: 'Cardo';
     font-weight: 400;
     font-size: 15px;
@@ -355,10 +355,140 @@ p{
     letter-spacing: 0.3px;
 }
 
-.footer{
+.footer-container{
+    padding: 10px;
+
     height: 448px;
 
     background-color: #E9E9E9;
+
+    display: flex;
+    flex-direction: column;
+
 }
 
+.footer-container-wrapper{
+    width: 1140px;
+    height: 285px;
+
+    margin: 40px 140px 0 140px;
+
+    display: flex;
+
+    justify-content: left;
+}
+
+.footer-nav{
+    width: 208px;
+    height: 265px;
+
+    margin: 10px;
+}
+
+.footer-nav:nth-last-child(2){
+    margin-right: 0;
+}
+
+.footer-nav-title{
+    padding-bottom: 45px;
+
+    font-family: 'Cardo';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.31;
+
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.footer-nav-subtitle{
+    padding-bottom: 13px;
+
+    font-family: 'Cardo';
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.25;
+
+    text-align: center;
+}
+
+.subscription{
+    width: 342px;
+    height: 285px;
+
+    margin-left: 124px;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.footer{
+    width: 1140px;
+    height: 105px;
+
+    margin-left: 140px;
+    margin-right: 140px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.copyright{
+    margin-left: 90px;
+    margin-top: 30px;
+
+    font-family: 'Cardo';
+    
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.37;
+}
+
+.privacy-policy{
+    margin-top: 20px;
+    margin-right: 70px;
+
+    font-family: 'Cardo';
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 1.37;
+
+    text-align: center;
+
+}
+
+.subscription-title{
+    font-family: 'Cardo';
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 28px;   
+}
+
+.footer-btn-subscribe{
+    margin: 17px auto 0 auto;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 237px;
+    height: 25px;
+
+    border: 1px solid #000000;
+    background: #FFFFFF;
+
+    font-family: 'Cardo';
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 15px;  
+}
+
+.save-earth{
+    padding: 31px 85px 19px 85px;
+
+    display: flex;
+    justify-content: space-between;
+}
 
